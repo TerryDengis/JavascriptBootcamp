@@ -1,0 +1,24 @@
+.big-title {
+  font-size: 10rem;
+  color: purple;
+  font-family: cursive;
+}
+h1 {
+  color: white;
+  font-size: 54px;
+}
+body {
+  margin: 0;
+}
+.hidden {
+  display: none !important;
+}
+.winner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+}

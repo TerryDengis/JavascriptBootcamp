@@ -1,0 +1,12 @@
+.big-title {
+  font-size: 10rem;
+  color: purple;
+  font-family: cursive;
+}
+
+.row {
+  margin-top: 25vh;
+}
+h1 {
+  margin-top: 0;
+}
