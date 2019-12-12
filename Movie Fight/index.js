@@ -13,7 +13,7 @@ const autoCompleteConfig = {
   async fetchData(searchTerm) {
     const response = await axios.get('http://www.omdbapi.com/', {
       params: {
-        apikey: '52fbae87',
+        apikey: '',
         s: searchTerm
       }
     });
@@ -66,18 +66,12 @@ const onMovieSelect = async (movie, summaryElement, side) => {
 };
 
 const runComparison = () => {
-  const leftSideStats = document.querySelectorAll(
-    '#left-summary .notification'
-  );
-  const rightSideStats = document.querySelectorAll(
-    '#right-summary .notification'
-  );
+  const leftSideStats = document.querySelectorAll('#left-summary .notification');
+  const rightSideStats = document.querySelectorAll('#right-summary .notification');
 
   leftSideStats.forEach((leftStat, index) => {
     const rightStat = rightSideStats[index];
-    if (
-      parseFloat(rightStat.dataset.value) > parseFloat(leftStat.dataset.value)
-    ) {
+    if (parseFloat(rightStat.dataset.value) > parseFloat(leftStat.dataset.value)) {
       leftStat.classList.remove('is-primary');
       leftStat.classList.add('is-warning');
     } else {
@@ -88,9 +82,7 @@ const runComparison = () => {
 };
 
 const movieTemplate = movieDetail => {
-  const dollars = parseInt(
-    movieDetail.BoxOffice.replace(/\$/g, '').replace(/,/g, '')
-  );
+  const dollars = parseInt(movieDetail.BoxOffice.replace(/\$/g, '').replace(/,/g, ''));
   const metascore = parseInt(movieDetail.Metascore);
   const imdbScore = parseFloat(movieDetail.imdbRating);
   const imdbVotes = parseInt(movieDetail.imdbVotes.replace(/,/g, ''));
