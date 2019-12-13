@@ -1,6 +1,5 @@
-*.~
-node_modules/
-.vagrant
+# Mac OS custom attributes folder
+.DS_Store
 
 # Logs
 logs
@@ -64,5 +63,4 @@ typings/
 # next.js build output
 .next
 
-# Mac OS custom attributes folder
-.DS_Store
+
