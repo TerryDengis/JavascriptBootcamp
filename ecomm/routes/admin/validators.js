@@ -10,8 +10,8 @@ module.exports = {
   requirePrice: check('price')
     .trim()
     .toFloat()
-    .isFloat({ min: 0.01 })
-    .withMessage('Must be a number greater than 0'),
+    .isFloat({ min: 1 })
+    .withMessage('Must be a number greater than 1'),
   requireEmail: check('email')
     .trim()
     .normalizeEmail()
