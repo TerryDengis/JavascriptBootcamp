@@ -1,6 +1,9 @@
 # Mac OS custom attributes folder
 .DS_Store
 
+# API keys
+config.js
+
 # Logs
 logs
 *.log
@@ -62,5 +65,3 @@ typings/
 
 # next.js build output
 .next
-
-
